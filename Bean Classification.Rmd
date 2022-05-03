@@ -65,14 +65,14 @@ train1[-class_index] <- scale(train1[-class_index])
 test1[-class_index] <- scale(test1[-class_index])
 ```
 
-In this analysis, we will be considering over 10,000 picture observations of 7 different bean types. Our goal is to produce a few machine learning models that use the characteristics of a bean to predict its type. We will then evaluate the performance of each model to determine which one maximizes accuracy when evaluated on a separate test set. The data set can be found [on GitHub](https://github.com/jasonhendrix9/IS4300-Final-Project), and it was originally pulled from the University of California, Irvine, which may be found [here](https://archive.ics.uci.edu/ml/datasets/Dry+Bean+Dataset).
+In this analysis, we will be using methods from [this book](https://rafalab.github.io/dsbook/) to consider over 10,000 picture observations of 7 different bean types. Our goal is to produce machine learning models that use characteristics of beans to predict their type. We will then evaluate the performance of each model to determine which maximizes accuracy when evaluated on a separate test set. The data set can be found [on GitHub](https://github.com/jasonhendrix9/IS4300-Final-Project), and it was originally pulled from the University of California, Irvine, which may be found [here](https://archive.ics.uci.edu/ml/datasets/Dry+Bean+Dataset).
 
 We begin by examining the 16 variables included in the data, which are defined as follows:
 
 1. *Area*: the number of pixels inside the boundaries of the bean
 2. *Perimeter*: length of the border of the bean
-3. *Major Axis Length*: the length of the longest line whose ends touch the boundary of the bean
-4. *Minor Axis Length*: the length of the longest line whose ends touch the boundary of the bean when the bean is placed perpendicular to the Major Axis
+3. *Major Axis Length*: length of the longest line whose ends touch the boundary of the bean
+4. *Minor Axis Length*: length of the longest line whose ends touch the boundary of the bean when the bean is placed perpendicular to the Major Axis
 5. *Aspect Ratio*: $\frac{\text{Major Axis Length}}{\text{Minor Axis Length}}$
 6. *Eccentricity*: how near the ellipse that fits the around bean is to a circle (a value of 1 indicates a perfect circle)
 7. *Convex Area*: the area of the smallest convex polygon that completely contains the bean
